@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="9oK-TZ-Pdx">
+                                <rect key="frame" x="0.0" y="490" width="600" height="110"/>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" distribution="fillEqually" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="JMC-AF-Pmr">
+                                <rect key="frame" x="0.0" y="-8" width="600" height="490"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How do you like our app" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J9v-Jx-njy">
+                                        <rect key="frame" x="208" y="0.0" width="184" height="143"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Acme_Monogram_Colour" translatesAutoresizingMaskIntoConstraints="NO" id="cJk-wY-VKe">
+                                        <rect key="frame" x="146" y="173" width="308" height="144"/>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="HrN-vA-Xf2">
+                                        <rect key="frame" x="257" y="347" width="87" height="143"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tPq-8E-7gJ">
+                                                <rect key="frame" x="0.0" y="0.0" width="87" height="30"/>
+                                                <state key="normal" title="Add Star!"/>
+                                                <connections>
+                                                    <action selector="allStartChick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Lka-i0-bEu"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EdO-O7-gjR">
+                                                <rect key="frame" x="0.0" y="30" width="87" height="113"/>
+                                                <state key="normal" title="Remove Star"/>
+                                                <connections>
+                                                    <action selector="RremoveStarChick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lSo-AT-JUE"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="490" id="uk6-LH-krK"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="9oK-TZ-Pdx" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="9uc-1a-vzD"/>
+                            <constraint firstItem="JMC-AF-Pmr" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="CPl-xn-WBA"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="9oK-TZ-Pdx" secondAttribute="bottom" id="Lwb-Ls-NrJ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="JMC-AF-Pmr" secondAttribute="trailing" constant="-20" id="MRY-RS-45D"/>
+                            <constraint firstItem="JMC-AF-Pmr" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="MZ7-mP-9IQ"/>
+                            <constraint firstItem="9oK-TZ-Pdx" firstAttribute="top" secondItem="JMC-AF-Pmr" secondAttribute="bottom" id="rkc-B1-Fpy"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="9oK-TZ-Pdx" secondAttribute="trailing" constant="-20" id="zkS-zO-1bn"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="horizontalStackView" destination="JMC-AF-Pmr" id="OfU-vz-Vks"/>
+                        <outlet property="verticalStackView" destination="9oK-TZ-Pdx" id="ROg-ib-pzV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="302" y="395"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Acme_Monogram_Colour" width="308" height="321"/>
+    </resources>
+</document>
