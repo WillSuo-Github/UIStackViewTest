@@ -9,6 +9,7 @@
 #import "ViewController.h"
 
 @interface ViewController ()
+
 @property (weak, nonatomic) IBOutlet UIStackView *verticalStackView;
 
 @property (weak, nonatomic) IBOutlet UIStackView *horizontalStackView;
@@ -19,30 +20,27 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
-    self.verticalStackView.backgroundColor = [UIColor redColor];
-    
-    self.horizontalStackView.backgroundColor = [UIColor yellowColor];
-    
 }
-- (IBAction)allStartChick:(id)sender {
+
+
+- (IBAction)addStartChick:(id)sender {
     
     UIImageView *starImageV = [[UIImageView alloc] init];
     starImageV.contentMode = UIViewContentModeScaleAspectFit;
     [starImageV setImage:[UIImage imageNamed:@"star"]];
-    [self.verticalStackView addArrangedSubview:starImageV];
+    [self.horizontalStackView addArrangedSubview:starImageV];
     
     [UIView animateWithDuration:3 animations:^{
-        [self.verticalStackView layoutIfNeeded];
+        [self.horizontalStackView layoutIfNeeded];
     }];
 }
 - (IBAction)RremoveStarChick:(id)sender {
     
-    UIView *starView = self.verticalStackView.arrangedSubviews.lastObject;
-    [self.verticalStackView removeArrangedSubview:starView];
+    UIView *starView = self.horizontalStackView.arrangedSubviews.lastObject;
+    [self.horizontalStackView removeArrangedSubview:starView];
     [starView removeFromSuperview];
     [UIView animateWithDuration:1 animations:^{
-        [self.verticalStackView layoutIfNeeded];
+        [self.horizontalStackView layoutIfNeeded];
     }];
     
 }
